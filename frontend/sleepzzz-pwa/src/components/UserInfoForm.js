@@ -24,7 +24,6 @@ const UserInfoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    // You can send this data to your backend using an API call here
   };
 
   return (
@@ -32,7 +31,6 @@ const UserInfoForm = () => {
       <h1>Welcome to Sleepzzz</h1>
       <p>Please fill out the following information to get started:</p>
       <form onSubmit={handleSubmit}>
-        {/* Name */}
         <label>
           Name:
           <input
@@ -43,8 +41,7 @@ const UserInfoForm = () => {
             required
           />
         </label>
-
-        {/* Gender */}
+              
         <label>
           Gender:
           <select
@@ -59,7 +56,6 @@ const UserInfoForm = () => {
           </select>
         </label>
 
-        {/* Occupation */}
         <label>
           Occupation:
           <input
@@ -71,7 +67,7 @@ const UserInfoForm = () => {
           />
         </label>
 
-        {/* Physical Activity */}
+
         <label>
           Physical Activity:
           <select
@@ -88,7 +84,7 @@ const UserInfoForm = () => {
           </select>
         </label>
 
-        {/* BMI Category */}
+
         <label>
           BMI Category:
           <select
@@ -105,7 +101,7 @@ const UserInfoForm = () => {
           </select>
         </label>
 
-        {/* Stress Level */}
+
         <label>
           Stress Level:
           <select
@@ -121,7 +117,7 @@ const UserInfoForm = () => {
           </select>
         </label>
 
-        {/* Blood Pressure */}
+
         <label>
           Blood Pressure:
           <input
@@ -134,7 +130,6 @@ const UserInfoForm = () => {
           />
         </label>
 
-        {/* Heart Rate */}
         <label>
           Heart Rate (bpm):
           <input
@@ -146,7 +141,7 @@ const UserInfoForm = () => {
           />
         </label>
 
-        {/* Daily Steps */}
+
         <label>
           Daily Steps:
           <input
