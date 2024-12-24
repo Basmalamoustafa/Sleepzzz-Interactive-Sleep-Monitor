@@ -1,0 +1,41 @@
+/* Add this to Navbar.css */
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;  /* Ensure it spans the full width of the screen */
+    position: sticky;  /* Keeps navbar at the top of the page */
+    top: 0;  /* Keeps it at the top */
+    z-index: 100;  /* Ensure it's above other content */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 15px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+  
+  a.active {
+    background-color: #1f09e4d4;
+    color: white;
+  }
+  
