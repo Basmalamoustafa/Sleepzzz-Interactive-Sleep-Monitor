@@ -1,0 +1,103 @@
+:root {
+    --mouse-x: 0;
+    --mouse-y: 0;
+    --hue: 50;
+    --bg: #1f0849e2;
+    --size: 100px;
+    --glow: radial-gradient(50% 50% at center, 
+            hsl(var(--hue) 80% 80%),
+            hsl(var(--hue) 70% 70%), 
+            transparent);
+}
+
+h1, p, label {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.home-page .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #2515439e;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+.home-page {
+    background-image: url('/Users/basmalamoustafa/Sleepzzz/frontend/public/assets/images/background_image.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page .button {
+    margin: 0 10px;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1ch;
+    background: var(--bg);
+    border: 4px solid transparent;
+    box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+    cursor: pointer;
+    background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--glow),
+        linear-gradient(black, black) border-box;
+    transition: background-size 0.24s;
+    touch-action: none;
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+.home-page .button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+    background: var(--bg);
+    z-index: 2;
+    border-radius: 1em;
+}
+
+.home-page .button span {
+    font-family: sans-serif;
+    font-weight: 900;
+    background: var(--glow), rgb(255, 255, 255);
+    background-clip: text;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    inset: 0;
+}
+
+:root:has(.home-page .button:active) {
+    --size: 300px;
+}
+
+.home-page .button::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    filter: blur(20px);
+    border: 4px solid transparent;
+    background: var(--glow);
+    border-radius: 1rem;
+}
