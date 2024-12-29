@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import "./SleepPage.scss";
 
+
 const SleepPage = () => {
   const navigate = useNavigate();
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -21,7 +22,7 @@ const SleepPage = () => {
   
     setStartTime(startTime);
   
-    fetch("http://127.0.0.1:5000/add-data", {
+    fetch("https://56e3-82-129-198-66.ngrok-free.app/add-data", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

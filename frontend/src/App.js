@@ -5,10 +5,17 @@ import HomePage from "./components/HomePage";
 import SleepPage from "./components/SleepPage";
 import Sleeping from "./components/Sleeping";
 import SleepReport from "./components/SleepReport";
+import { AudioProvider } from "./components/AudioContext";
+import MicrophoneSensor from "./components/MicrophoneSensor";
 import "./App.css";
 
 const App = () => {
   return (
+    
+
+    <AudioProvider>
+  
+      
     <Router>
       <Routes>
         {/* User Info Form */}
@@ -29,6 +36,8 @@ const App = () => {
 
       </Routes>
     </Router>
+ 
+    </AudioProvider>
   );
 };
 

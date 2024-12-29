@@ -1,0 +1,159 @@
+h1,h5,label{
+    color: #fff !important;
+  }
+  
+  sleep-report.p{
+      color: rgba(98, 1, 98, 0.704);
+  }
+  
+  body {
+      background-image: url('C:/Users/Rawan/Desktop/HCI-Sleep/Sleepzzz-Interactive-Sleep-Monitor/frontend/public/assets/images/background_image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .sleep-report {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: rgba(37, 21, 67, 0.6); 
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+  
+    .sleep-score h2 {
+      color: #fff;
+    }
+  
+    .sleep-score .stars {
+      color: #ffcc00;
+  
+    }
+  
+    .sleep-score {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+  
+    .sleep-stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .sleep-card {
+      background-color: rgba(255, 255, 255, 0.7); 
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      min-width: 200px;
+    }
+  
+    @media (max-width: 768px) {
+      .sleep-report {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+  
+    .sleep-graph {
+      margin-bottom: 10px;  
+    }
+    
+    
+    .sleep-stats {
+      display: flex;
+      flex-wrap: wrap;  
+      gap: 20px;  
+      justify-content: space-between; 
+    }
+    
+    .stat-card {
+      
+      width: calc(50% - 20px); 
+     
+    }
+  
+  
+  
+    .satisfaction-feedback {
+    
+      color: #6b217e;
+      border-radius: 15px; 
+      text-align: center;
+    }
+  
+    .satisfaction-feedback h3{
+      font-size: 20px;
+    }
+  
+    .satisfaction-feedback select {
+      padding: 5px;
+      font-size: 1rem;
+      border: 2px solid#6b217e;
+      border-radius: 10px;
+      background: #fff9fc;
+      cursor: pointer;
+    }
+  
+  
+  
+    .satisfaction-feedback option[value="Very Satisfied"]::before {
+      content: "😃 ";
+    }
+    
+    .satisfaction-feedback option[value="Satisfied"]::before {
+      content: "🙂 ";
+    }
+    
+    .satisfaction-feedback option[value="Neutral"]::before {
+      content: "😐 ";
+    }
+    
+    .satisfaction-feedback option[value="Dissatisfied"]::before {
+      content: "😕 ";
+    }
+    
+    .satisfaction-feedback option[value="Very Dissatisfied"]::before {
+      content: "😡 ";
+    }
+    
+    
+    .select-and-emoji {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+  
+    
+    .selected-emoji {
+      font-size: 20px; 
+    }
+    
+  
+    .select-and-emoji select {
+  
+      font-size: 13px;
+      font-family: "Comic Sans MS", "Arial", sans-serif; 
+      color: #6b217e; 
+      border: 2px solid#6b217e; 
+      border-radius: 12px; 
+      outline: none;
+      cursor: pointer;
+  
+    }

@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+import { useAudio } from "./AudioContext";
 import "./Sleeping.css";
+import MicrophoneSensor from "./MicrophoneSensor";
 
 const Sleeping = () => {
   const navigate = useNavigate();
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [endTime, setEndTime] = useState(null);
+
+
+    
+  const { setAudioData } = useAudio();  
+  const [isRecording, setIsRecording] = useState(false);
+   
 
   useEffect(() => {
     const updatePointerPosition = ({ x: mouseX, y: mouseY }) => { 
@@ -32,7 +40,7 @@ const Sleeping = () => {
   
     setEndTime(EndTime);
   
-    fetch("http://127.0.0.1:5000/add-data", {
+    fetch("https://56e3-82-129-198-66.ngrok-free.app/add-data", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,15 +61,25 @@ const Sleeping = () => {
     });  
   };
 
+
+  const handleRecording = async () => {
+    if (isRecording) {
+      
+      setIsRecording(false); 
+    } else {
+      
+      setIsRecording(true); 
+    }
+  };
+
+
   return (
     <div className="sleeping_page">
     <div className="container">
       <div className="clock">
         <span>{time}</span>
       </div>
-      <button onClick={handleWakeUpClick}>
-        <span>Wake-up ☀️</span>
-      </button>
+      
       {endTime && (
         <div className="end-time">
           <p>End time: {endTime}</p> 
@@ -149,7 +167,18 @@ const Sleeping = () => {
         <div className="phone"></div>
       </div>
     </div>
-    </div>
+  <button onClick={handleWakeUpClick}>
+    <span>Wake-up ☀️</span>
+  </button>
+
+  <div className="recording-button">
+    <button onClick={handleRecording}>
+      {isRecording ? 'Stop Recording' : 'Start Recording'}
+    </button>
+</div>
+      <MicrophoneSensor isRecording={isRecording} setAudioData={setAudioData} />    </div>
+
+    
   );
 };
 

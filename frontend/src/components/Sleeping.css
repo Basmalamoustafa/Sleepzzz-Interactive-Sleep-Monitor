@@ -54,7 +54,7 @@
     touch-action: none;
     position: absolute;
     padding: 1rem 2rem;
-    top: 320px;
+    top: 300px;
     left: 50%;
     transform: translateX(-60%);
     z-index: 1; 
